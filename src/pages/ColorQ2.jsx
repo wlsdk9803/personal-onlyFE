@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { TextBox, Button, Background, Wrapper } from "../component/Styled";
 import styled from "styled-components";
 import { FaChevronLeft } from "react-icons/fa";
@@ -89,6 +89,7 @@ const RestartBtn = () => {
 const ColorQ2 = () => {
   const [buttonCQ2, setButtonCQ2] = useState(0);
   const location = useLocation();
+  console.log(location.state);
 
   return (
     <>
@@ -184,7 +185,7 @@ const ColorQ2 = () => {
               </TextBox>
             </Mainbox>
 
-            <NavLink to={"/colorQ1"}>
+            <Link to={"/colorQ1"} state={{ CQ1: location.state.CQ1 }}>
               <Button
                 borderRadius="50%"
                 padding="7px 10px 3px 7px"
@@ -198,7 +199,7 @@ const ColorQ2 = () => {
               >
                 <IoIosArrowBack color="black" />
               </Button>
-            </NavLink>
+            </Link>
 
             <Link
               to={buttonCQ2 > 0 ? "/colorQ3" : "/colorQ2"}

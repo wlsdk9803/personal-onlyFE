@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { TextBox, Button, Background, Wrapper } from "../component/Styled";
 import styled from "styled-components";
 import { FaChevronLeft } from "react-icons/fa";
@@ -184,7 +184,13 @@ const ColorQ3 = () => {
               </TextBox>
             </Mainbox>
 
-            <NavLink to={"/colorQ2"}>
+            <Link
+              to={"/colorQ2"}
+              state={{
+                CQ1: location.state.CQ1,
+                CQ2: location.state.CQ2,
+              }}
+            >
               <Button
                 borderRadius="50%"
                 padding="7px 10px 3px 7px"
@@ -198,7 +204,7 @@ const ColorQ3 = () => {
               >
                 <IoIosArrowBack color="black" />
               </Button>
-            </NavLink>
+            </Link>
 
             <Link
               to={buttonCQ3 > 0 ? "/colorQ4" : "/colorQ3"}

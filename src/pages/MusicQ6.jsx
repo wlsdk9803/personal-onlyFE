@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { TextBox, Button, Background, Wrapper } from "../component/Styled";
 import styled from "styled-components";
 import { FaChevronLeft } from "react-icons/fa";
@@ -193,7 +193,16 @@ const MusicQ6 = () => {
               </TextBox>
             </Mainbox>
 
-            <NavLink to={"/musicQ5"}>
+            <Link
+              to={"/musicQ5"}
+              state={{
+                MQ1: location.state.MQ1,
+                MQ2: location.state.MQ2,
+                MQ3: location.state.MQ3,
+                MQ4: location.state.MQ4,
+                MQ5: location.state.MQ5,
+              }}
+            >
               <Button
                 borderRadius="50%"
                 padding="7px 10px 3px 7px"
@@ -208,7 +217,7 @@ const MusicQ6 = () => {
               >
                 <IoIosArrowBack />
               </Button>
-            </NavLink>
+            </Link>
 
             <Link
               to={buttonMQ6 < 6 ? "/musicResult" : "/musicQ6"}
