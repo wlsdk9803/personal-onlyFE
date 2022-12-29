@@ -1,0 +1,27 @@
+ul {
+  margin-left: 10px;
+  float: right;
+}
+
+li {
+  margin: 0px;
+}
+
+#sns {
+  display: inline;
+  margin-right: 16px;
+}
+
+a[title|="message"] {
+  padding: 5px 15px;
+  background: url("../../img/message.JPG") no-repeat left center;
+  background-size: 32px;
+  color: white;
+}
+
+a[title|="kakao"] {
+  padding: 5px 15px;
+  background: url("../../img/kakao.JPG") no-repeat left center;
+  background-size: 32px;
+  color: white;
+}
