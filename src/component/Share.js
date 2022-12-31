@@ -1,4 +1,4 @@
-const url = "https://inha-hackathon-personal-fe-2yi.pages.dev/";
+const url = "https://personal-onlyfe.pages.dev/";
 
 const SetShare = () => {
   const shareTitle = "Personal";
