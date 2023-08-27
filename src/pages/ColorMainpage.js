@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import {
   TextBox,
   Button,
@@ -11,6 +11,7 @@ import styled from "styled-components";
 import { BsRecordFill } from "react-icons/bs";
 import { motion } from "framer-motion";
 import { animate } from "../component/Styled/animate";
+import { useState } from "react";
 
 const Mainbox = styled.div`
   width: 272px;
@@ -23,6 +24,7 @@ const Mainbox = styled.div`
   box-shadow: 0 0 5px lightgray;
   background-color: #ffffff;
   text-align: center;
+  cursor: pointer;
 `;
 
 const CircleBox = styled.div`
@@ -36,6 +38,27 @@ const IconWrapper = styled.div`
 `;
 
 const ColorMainpage = () => {
+  const [dragStartX, setDragStartX] = useState(null);
+  const [touchStartX, setTouchStartX] = useState(null);
+  const navigate = useNavigate();
+
+  const handleDragStart = (e) => {
+    setDragStartX(e.clientX);
+  };
+  const handleDragEnd = (e) => {
+    if (dragStartX && e.clientX < dragStartX) navigate("/musicMain");
+    setDragStartX(null);
+  };
+
+  const handleTouchStart = (e) => {
+    setTouchStartX(e.touches[0].clientX);
+  };
+  const handleTouchEnd = (e) => {
+    if (touchStartX && e.changedTouches[0].clientX < touchStartX)
+      navigate("/musicMain");
+    setTouchStartX(null);
+  };
+
   return (
     <>
       <motion.div
@@ -57,7 +80,13 @@ const ColorMainpage = () => {
               나만의 감각을 찾아보세요
             </TextBox>
 
-            <Mainbox>
+            <Mainbox
+              draggable="true"
+              onDragStart={handleDragStart}
+              onDragEnd={handleDragEnd}
+              onTouchStart={handleTouchStart}
+              onTouchEnd={handleTouchEnd}
+            >
               <CircleBox float="right" padding="16px 24px 0 0">
                 <Circle
                   background="linear-gradient(to left, #A712DFB2, #FFB80066)"
@@ -119,6 +148,7 @@ const ColorMainpage = () => {
                   fontWeight="700"
                   float="center"
                   boxShadow="5px 5px 10px rgb(200, 200, 200)"
+                  hoverBackgroundColor="linear-gradient(to right, #f1abf6, #e655ed)"
                 >
                   알아볼까?
                 </Button>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { TextBox, Button, Background, Wrapper } from "../component/Styled";
 import styled from "styled-components";
 import { FaChevronLeft } from "react-icons/fa";
@@ -7,7 +7,6 @@ import Modal2 from "../component/ModalMusic";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { motion } from "framer-motion";
 import { animate } from "../component/Styled/animate";
-import { useLocation } from "react-router-dom";
 
 const Mainbox = styled.div`
   width: 272px;
@@ -89,8 +88,20 @@ const RestartBtn = () => {
 };
 
 const MusicQ4 = () => {
-  const [buttonMQ4, setButtonMQ4] = useState(6);
   const location = useLocation();
+  const [buttonMQ4, setButtonMQ4] = useState(
+    location.state && location.state.MQ4 ? location.state.MQ4 : 6
+  );
+  const buttonMQ1 =
+    location.state && location.state.MQ1 > 0 ? location.state.MQ1 : 0;
+  const buttonMQ2 =
+    location.state && location.state.MQ2 > 0 ? location.state.MQ2 : 0;
+  const buttonMQ3 =
+    location.state && location.state.MQ3 > 0 ? location.state.MQ3 : 0;
+  const buttonMQ5 =
+    location.state && location.state.MQ5 > 0 ? location.state.MQ5 : 0;
+  const buttonMQ6 =
+    location.state && location.state.MQ6 < 6 ? location.state.MQ6 : 6;
 
   return (
     <>
@@ -188,9 +199,12 @@ const MusicQ4 = () => {
             <Link
               to={"/musicQ3"}
               state={{
-                MQ1: location.state.MQ1,
-                MQ2: location.state.MQ2,
-                MQ3: location.state.MQ3,
+                MQ1: buttonMQ1,
+                MQ2: buttonMQ2,
+                MQ3: buttonMQ3,
+                MQ4: buttonMQ4,
+                MQ5: buttonMQ5,
+                MQ6: buttonMQ6,
               }}
             >
               <Button
@@ -211,10 +225,12 @@ const MusicQ4 = () => {
             <Link
               to={buttonMQ4 < 6 ? "/musicQ5" : "/musicQ4"}
               state={{
-                MQ1: location.state.MQ1,
-                MQ2: location.state.MQ2,
-                MQ3: location.state.MQ3,
+                MQ1: buttonMQ1,
+                MQ2: buttonMQ2,
+                MQ3: buttonMQ3,
                 MQ4: buttonMQ4,
+                MQ5: buttonMQ5,
+                MQ6: buttonMQ6,
               }}
             >
               <Button

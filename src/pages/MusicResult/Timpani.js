@@ -86,6 +86,7 @@ const Timpani = () => {
             link="/"
             kind="소리"
             buttonColor="linear-gradient(to right, #f0b6f3, #eb76f1)"
+            hoverColor="linear-gradient(to right, #f1abf6, #e655ed)"
             suitPlace="자연이 조화롭게 어우러진 숲 속 계곡"
             SuitFriend="오보에, 바이올린"
             next="색깔"

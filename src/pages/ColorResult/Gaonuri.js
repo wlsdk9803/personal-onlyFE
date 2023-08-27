@@ -55,7 +55,7 @@ const Gaonuri = () => {
               colorName="가온누리"
               shortExplain="무슨 일이든 세상의 중심이 된다."
               colorMean="'역동적인 강렬함의 상징'"
-              image="https://ifh.cc/g/MnGRGw.jpg"
+              image="가온누리.png"
               contentHeight="135px"
             >
               힘, 열정, 적극성이 가장 두드러지는 성격.
@@ -81,6 +81,7 @@ const Gaonuri = () => {
               link="/musicMain"
               kind="색"
               buttonColor="linear-gradient(to right, #fedf56, #ffd000)"
+              hoverColor="linear-gradient(to right, #ffdc3f, #ffba0a)"
               suitPlace="활기와 열정이 넘치는 클럽"
               SuitFriend="깊이있는 혜윰"
               next="소리"

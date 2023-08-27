@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { TextBox, Button, Background, Wrapper } from "../component/Styled";
 import styled from "styled-components";
 import { FaChevronLeft } from "react-icons/fa";
@@ -7,7 +7,6 @@ import Modal from "../component/Modal";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { motion } from "framer-motion";
 import { animate } from "../component/Styled/animate";
-import { useLocation } from "react-router-dom";
 
 const Mainbox = styled.div`
   width: 272px;
@@ -87,8 +86,20 @@ const RestartBtn = () => {
   );
 };
 const ColorQ5 = () => {
-  const [buttonCQ5, setButtonCQ5] = useState(0);
   const location = useLocation();
+  const [buttonCQ5, setButtonCQ5] = useState(
+    location.state && location.state.CQ5 ? location.state.CQ5 : 0
+  );
+  const buttonCQ1 =
+    location.state && location.state.CQ1 > 0 ? location.state.CQ1 : 0;
+  const buttonCQ2 =
+    location.state && location.state.CQ2 > 0 ? location.state.CQ2 : 0;
+  const buttonCQ3 =
+    location.state && location.state.CQ3 > 0 ? location.state.CQ3 : 0;
+  const buttonCQ4 =
+    location.state && location.state.CQ4 > 0 ? location.state.CQ4 : 0;
+  const buttonCQ6 =
+    location.state && location.state.CQ6 > 0 ? location.state.CQ6 : 0;
 
   return (
     <>
@@ -186,10 +197,12 @@ const ColorQ5 = () => {
             <Link
               to={"/colorQ4"}
               state={{
-                CQ1: location.state.CQ1,
-                CQ2: location.state.CQ2,
-                CQ3: location.state.CQ3,
-                CQ4: location.state.CQ4,
+                CQ1: buttonCQ1,
+                CQ2: buttonCQ2,
+                CQ3: buttonCQ3,
+                CQ4: buttonCQ4,
+                CQ5: buttonCQ5,
+                CQ6: buttonCQ6,
               }}
             >
               <Button
@@ -211,11 +224,12 @@ const ColorQ5 = () => {
             <Link
               to={buttonCQ5 > 0 ? "/colorQ6" : "/colorQ5"}
               state={{
-                CQ1: location.state.CQ1,
-                CQ2: location.state.CQ2,
-                CQ3: location.state.CQ3,
-                CQ4: location.state.CQ4,
+                CQ1: buttonCQ1,
+                CQ2: buttonCQ2,
+                CQ3: buttonCQ3,
+                CQ4: buttonCQ4,
                 CQ5: buttonCQ5,
+                CQ6: buttonCQ6,
               }}
             >
               <Button

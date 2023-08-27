@@ -15,6 +15,9 @@ export const Button = styled.button`
   float: ${(props) => props.float || "none"};
   box-shadow: ${(props) => props.boxShadow || "none"};
   width: ${(props) => props.width};
+  &:hover {
+    background: ${(props) => props.hoverBackgroundColor};
+  }
 `;
 export const ButtonWrapper = styled.div`
   width: 100%;

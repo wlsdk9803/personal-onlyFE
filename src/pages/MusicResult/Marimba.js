@@ -88,6 +88,7 @@ const Marimba = () => {
             link="/"
             kind="소리"
             buttonColor="linear-gradient(to right, #f0b6f3, #eb76f1)"
+            hoverColor="linear-gradient(to right, #f1abf6, #e655ed)"
             suitPlace="아기자기한 골목 안의 카페"
             SuitFriend="바이올린, 바순"
             next="색깔"

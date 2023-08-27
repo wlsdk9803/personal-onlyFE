@@ -82,6 +82,7 @@ const Bassoon = () => {
             link="/"
             kind="소리"
             buttonColor="linear-gradient(to right, #f0b6f3, #eb76f1)"
+            hoverColor="linear-gradient(to right, #f1abf6, #e655ed)"
             suitPlace="차분한 분위기의 재즈바"
             SuitFriend="피아노, 마림바"
             next="색깔"

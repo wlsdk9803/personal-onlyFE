@@ -55,7 +55,7 @@ const Laonjena = () => {
               colorName="라온제나"
               shortExplain="즐겁고 기쁨 우리"
               colorMean="'행복과 희망의 상징'"
-              image="https://i.postimg.cc/DyBy6VS9/image.jpg"
+              image="라온제나.jpg"
               contentHeight="155px"
             >
               항상 활기차며 즐거운 느낌을 상대방에게 퍼뜨립니다.
@@ -85,6 +85,7 @@ const Laonjena = () => {
               link="/musicMain"
               kind="색"
               buttonColor="linear-gradient(to right, #fedf56, #ffd000)"
+              hoverColor="linear-gradient(to right, #ffdc3f, #ffba0a)"
               suitPlace="희망과 웃음이 넘치는 놀이공원"
               SuitFriend="신중한 꽃구름"
               next="소리"

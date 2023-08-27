@@ -83,6 +83,7 @@ const Cello = () => {
             link="/"
             kind="소리"
             buttonColor="linear-gradient(to right, #f0b6f3, #eb76f1)"
+            hoverColor="linear-gradient(to right, #f1abf6, #e655ed)"
             suitPlace="평화로운 분위기의 학교"
             SuitFriend="파이프 오르간, 피아노"
             next="색깔"

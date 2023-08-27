@@ -55,7 +55,7 @@ const Gaongil = () => {
               colorName="가온길"
               shortExplain="정직하고 바른 가운데 길"
               colorMean="'중립과 공정함의 상징'"
-              image="https://i.postimg.cc/BQ3F8GFH/image.jpg"
+              image="가온길.jpg"
               contentHeight="150px"
             >
               색의 구성 요소가 정확히 반씩 섞인 '가온길'.
@@ -80,6 +80,7 @@ const Gaongil = () => {
               link="/musicMain"
               kind="색"
               buttonColor="linear-gradient(to right, #fedf56, #ffd000)"
+              hoverColor="linear-gradient(to right, #ffdc3f, #ffba0a)"
               suitPlace="고요하지만 웅장한 아쿠아리움"
               SuitFriend="적극적인 온새미로"
               next="소리"

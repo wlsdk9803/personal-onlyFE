@@ -55,7 +55,7 @@ const Dubitnarae = () => {
               colorName="두빛나래"
               shortExplain="두 개의 빛나는 날개"
               colorMean="'신비로움과 우아함의 상징'"
-              image="https://i.postimg.cc/SKZ6b113/image.jpg"
+              image="두빛나래.jpg"
               contentHeight="155px"
             >
               남다름과 우아함을 가진 당신은 오묘한 분위기를 주는 '두빛나래'와
@@ -84,6 +84,7 @@ const Dubitnarae = () => {
               link="/musicMain"
               kind="색"
               buttonColor="linear-gradient(to right, #fedf56, #ffd000)"
+              hoverColor="linear-gradient(to right, #ffdc3f, #ffba0a)"
               suitPlace="차분한 분위기의 카페"
               SuitFriend="자유로운 미르"
               next="소리"

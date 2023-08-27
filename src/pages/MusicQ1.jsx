@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { TextBox, Button, Background, Wrapper } from "../component/Styled";
 import styled from "styled-components";
 import { FaChevronLeft } from "react-icons/fa";
@@ -88,7 +88,20 @@ const RestartBtn = () => {
 };
 
 const MusicQ1 = () => {
-  const [buttonMQ1, setButtonMQ1] = useState(0);
+  const location = useLocation();
+  const [buttonMQ1, setButtonMQ1] = useState(
+    location.state && location.state.MQ1 ? location.state.MQ1 : 0
+  );
+  const buttonMQ2 =
+    location.state && location.state.MQ2 > 0 ? location.state.MQ2 : 0;
+  const buttonMQ3 =
+    location.state && location.state.MQ3 > 0 ? location.state.MQ3 : 0;
+  const buttonMQ4 =
+    location.state && location.state.MQ4 < 6 ? location.state.MQ4 : 6;
+  const buttonMQ5 =
+    location.state && location.state.MQ5 > 0 ? location.state.MQ5 : 0;
+  const buttonMQ6 =
+    location.state && location.state.MQ6 < 6 ? location.state.MQ6 : 6;
 
   return (
     <>
@@ -185,7 +198,14 @@ const MusicQ1 = () => {
 
             <Link
               to={buttonMQ1 > 0 ? "/musicQ2" : "/musicQ1"}
-              state={{ MQ1: buttonMQ1 }}
+              state={{
+                MQ1: buttonMQ1,
+                MQ2: buttonMQ2,
+                MQ3: buttonMQ3,
+                MQ4: buttonMQ4,
+                MQ5: buttonMQ5,
+                MQ6: buttonMQ6,
+              }}
             >
               <Button
                 borderRadius="50%"

@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import {
   TextBox,
   Button,
@@ -11,6 +11,7 @@ import styled from "styled-components";
 import { BsRecordFill } from "react-icons/bs";
 import { motion } from "framer-motion";
 import { animate } from "../component/Styled/animate";
+import { useState } from "react";
 
 const Mainbox = styled.div`
   width: 272px;
@@ -23,6 +24,7 @@ const Mainbox = styled.div`
   box-shadow: 0 0 5px lightgray;
   background: linear-gradient(90deg, #eeede8, #e9e5e2);
   text-align: center;
+  cursor: pointer;
 `;
 
 const IconWrapper = styled.div`
@@ -43,6 +45,26 @@ const Line = styled.div`
 `;
 
 const MusicMainpage = () => {
+  const [dragStartX, setDragStartX] = useState(null);
+  const [touchStartX, setTouchStartX] = useState(null);
+  const navigate = useNavigate();
+
+  const handleDragStart = (e) => {
+    setDragStartX(e.clientX);
+  };
+  const handleDragEnd = (e) => {
+    if (dragStartX && e.clientX > dragStartX) navigate("/");
+    setDragStartX(null);
+  };
+
+  const handleTouchStart = (e) => {
+    setTouchStartX(e.touches[0].clientX);
+  };
+  const handleTouchEnd = (e) => {
+    if (touchStartX && e.changedTouches[0].clientX > touchStartX) navigate("/");
+    setTouchStartX(null);
+  };
+
   return (
     <>
       <motion.div
@@ -64,7 +86,13 @@ const MusicMainpage = () => {
               나만의 감각을 찾아보세요
             </TextBox>
 
-            <Mainbox>
+            <Mainbox
+              draggable="true"
+              onDragStart={handleDragStart}
+              onDragEnd={handleDragEnd}
+              onTouchStart={handleTouchStart}
+              onTouchEnd={handleTouchEnd}
+            >
               <ImageBox float="left" padding="57px 0 0 33px">
                 <NoteImage
                   width="26px"
@@ -123,6 +151,7 @@ const MusicMainpage = () => {
                   fontWeight="700"
                   float="center"
                   boxShadow="5px 5px 10px rgb(200, 200, 200)"
+                  hoverBackgroundColor="linear-gradient(to right, #ffdc3f, #ffba0a)"
                 >
                   알아볼까?
                 </Button>

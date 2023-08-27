@@ -55,7 +55,7 @@ const Onsaemiro = () => {
               colorName="온새미로"
               shortExplain="자연 그대로, 변함없이"
               colorMean="'평화와 인내의 상징'"
-              image="https://i.postimg.cc/ydfzMb5D/image.jpg"
+              image="온새미로.jpg"
               contentHeight="135px"
             >
               자연의 푸르름과 온화함을 담은 '온새미로'는
@@ -80,6 +80,7 @@ const Onsaemiro = () => {
               link="/musicMain"
               kind="색"
               buttonColor="linear-gradient(to right, #fedf56, #ffd000)"
+              hoverColor="linear-gradient(to right, #ffdc3f, #ffba0a)"
               suitPlace="수년동안 자리를 지키는 고궁"
               SuitFriend="굳건한 가온길"
               next="소리"

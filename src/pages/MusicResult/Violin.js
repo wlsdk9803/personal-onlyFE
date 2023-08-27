@@ -86,6 +86,7 @@ const Violin = () => {
             link="/"
             kind="소리"
             buttonColor="linear-gradient(to right, #f0b6f3, #eb76f1)"
+            hoverColor="linear-gradient(to right, #f1abf6, #e655ed)"
             suitPlace="댜양한 사람들이 모여 노는 축제"
             SuitFriend="마림바, 팀파니"
             next="색깔"

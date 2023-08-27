@@ -55,7 +55,7 @@ const FlowerCloud = () => {
               colorName="꽃구름"
               shortExplain="여러가지 빛을 띈 아름다운 구름"
               colorMean="'조화로움과 신중함의 상징'"
-              image="https://i.postimg.cc/N0xX7CwL/image.jpg"
+              image="꽃구름.jpg"
               contentHeight="155px"
             >
               모든 색이 적절히 혼합되어 있는 '꽃구름'.
@@ -84,6 +84,7 @@ const FlowerCloud = () => {
               link="/musicMain"
               kind="색"
               buttonColor="linear-gradient(to right, #fedf56, #ffd000)"
+              hoverColor="linear-gradient(to right, #ffdc3f, #ffba0a)"
               suitPlace="가지각색의 사람들이 모이는 공원"
               SuitFriend="빛나는 라온제나"
               next="소리"

@@ -55,7 +55,7 @@ const Mirr = () => {
               colorName="미르"
               shortExplain="한마리의 날아오르는 용"
               colorMean="'자유로움과 쾌락의 상징'"
-              image="https://i.postimg.cc/gkkGnMgN/image.jpg"
+              image="미르.jpg"
               contentHeight="155px"
             >
               매일이 즐겁고 신나며 자유를 추구하는 당신은 상쾌한 분위기의
@@ -82,6 +82,7 @@ const Mirr = () => {
               link="/musicMain"
               kind="색"
               buttonColor="linear-gradient(to right, #fedf56, #ffd000)"
+              hoverColor="linear-gradient(to right, #ffdc3f, #ffba0a)"
               suitPlace="전세계를 누비는 비행기 안"
               SuitFriend="진중한 두빛나래"
               next="소리"

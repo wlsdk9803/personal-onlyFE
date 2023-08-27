@@ -85,6 +85,7 @@ const Organ = () => {
             link="/"
             kind="소리"
             buttonColor="linear-gradient(to right, #f0b6f3, #eb76f1)"
+            hoverColor="linear-gradient(to right, #f1abf6, #e655ed)"
             suitPlace="신성함이 압도하는 성당"
             SuitFriend="첼로, 오보에"
             next="색깔"

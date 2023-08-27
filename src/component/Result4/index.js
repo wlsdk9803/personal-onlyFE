@@ -93,6 +93,7 @@ const Result4 = (props) => {
             boxShadow="0 5px 5px rgb(170, 170, 170)"
             navigate
             to={props.link}
+            hoverBackgroundColor={props.hoverColor}
           >
             나의 {props.next} 알아보기
           </Button>

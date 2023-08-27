@@ -55,7 +55,7 @@ const Heyum = () => {
               colorName="혜윰"
               shortExplain="맑은 강처럼 깊게 헤아리다."
               colorMean="'신뢰와 투명함의 상징'"
-              image="https://i.postimg.cc/2ySg8tCW/image.jpg"
+              image="혜윰.jpg"
               contentHeight="117px"
             >
               맑게 비추는 '가람'은 타인에게 신선한 느낌을 전달하여 마음을
@@ -81,6 +81,7 @@ const Heyum = () => {
               link="/musicMain"
               kind="색"
               buttonColor="linear-gradient(to right, #fedf56, #ffd000)"
+              hoverColor="linear-gradient(to right, #ffdc3f, #ffba0a)"
               suitPlace="잔잔하게 탁 트인 호숫가"
               SuitFriend="타오르는 가온누리"
               next="소리"

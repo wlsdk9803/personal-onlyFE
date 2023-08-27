@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { TextBox, Button, Background, Wrapper } from "../component/Styled";
 import styled from "styled-components";
 import { FaChevronLeft } from "react-icons/fa";
@@ -88,7 +88,20 @@ const RestartBtn = () => {
 };
 
 const ColorQ1 = () => {
-  const [buttonCQ1, setButtonCQ1] = useState(0);
+  const location = useLocation();
+  const [buttonCQ1, setButtonCQ1] = useState(
+    location.state && location.state.CQ1 ? location.state.CQ1 : 0
+  );
+  const buttonCQ2 =
+    location.state && location.state.CQ2 > 0 ? location.state.CQ2 : 0;
+  const buttonCQ3 =
+    location.state && location.state.CQ3 > 0 ? location.state.CQ3 : 0;
+  const buttonCQ4 =
+    location.state && location.state.CQ4 > 0 ? location.state.CQ4 : 0;
+  const buttonCQ5 =
+    location.state && location.state.CQ5 > 0 ? location.state.CQ5 : 0;
+  const buttonCQ6 =
+    location.state && location.state.CQ6 > 0 ? location.state.CQ6 : 0;
 
   return (
     <>
@@ -185,7 +198,14 @@ const ColorQ1 = () => {
 
             <Link
               to={buttonCQ1 > 0 ? "/colorQ2" : "/colorQ1"}
-              state={{ CQ1: buttonCQ1 }}
+              state={{
+                CQ1: buttonCQ1,
+                CQ2: buttonCQ2,
+                CQ3: buttonCQ3,
+                CQ4: buttonCQ4,
+                CQ5: buttonCQ5,
+                CQ6: buttonCQ6,
+              }}
             >
               <Button
                 borderRadius="50%"
