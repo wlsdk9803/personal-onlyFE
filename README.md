@@ -13,7 +13,7 @@
 **인원**
 
 - 총 5명에서 진행( FE: 2명, BE:2명, Design:1명)
-- 현재 only-frontend 버전은 FE 2명이 진행
+- 현재 only-frontend 버전은 FE 2명이 진행 <br/>
   (기존 프로젝트 github 주소: https://github.com/Likelion-Inha-10/inha-hackathon-Personal-fe)
 
 <br/>
