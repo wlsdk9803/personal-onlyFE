@@ -95,6 +95,13 @@ export const MusicPlay = styled.audio`
     border-radius: 30px;
     padding: 3px;
   }
+  &::-webkit-media-controls-background {
+    background-color: #f5f5f5;
+    width: 100%;
+    height: 50px;
+    border-radius: 30px;
+    padding: 3px;
+  }
 
   &::-webkit-media-controls-play-button,
   &::-webkit-media-controls-pause-button,
