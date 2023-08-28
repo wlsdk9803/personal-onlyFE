@@ -3,7 +3,6 @@ import {
   Background,
   TextBox,
   CardWrapper,
-  MusicPlay,
 } from "../../component/Styled/index.js";
 import MusicResult1 from "../../component/MusicResult1/index.js";
 import Result2 from "../../component/Result2/index.js";
@@ -50,9 +49,9 @@ const Bassoon = () => {
           <TextBox padding="100px 0 0 24px" fontSize="17px" fontWeight="bold">
             나의 소리는?
           </TextBox>
-          <MusicPlay controls>
+          <audio controls>
             <source src="바순.mp3" type="audio/mpeg" />
-          </MusicPlay>
+          </audio>
 
           <MusicResult1
             musicName="바순"
