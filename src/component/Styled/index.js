@@ -87,6 +87,22 @@ export const MusicImage = styled.div`
   background-size: cover;
   overflow: hidden;
 `;
+export const MusicPlay = styled.audio`
+  &::-webkit-media-controls-panel {
+    background-color: #f5f5f5;
+    width: 100%;
+    height: 50px;
+    border-radius: 30px;
+    padding: 3px;
+  }
+
+  &::-webkit-media-controls-play-button,
+  &::-webkit-media-controls-pause-button,
+  &::-webkit-media-controls-volume-slider {
+    color: black;
+  }
+`;
+
 export const NoteImage = styled.div`
   width: ${(props) => props.width};
   height: ${(props) => props.height};

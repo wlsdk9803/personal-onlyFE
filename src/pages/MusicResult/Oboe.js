@@ -3,6 +3,7 @@ import {
   Background,
   TextBox,
   CardWrapper,
+  MusicPlay,
 } from "../../component/Styled/index.js";
 import MusicResult1 from "../../component/MusicResult1/index.js";
 import Result2 from "../../component/Result2/index.js";
@@ -49,7 +50,9 @@ const Oboe = () => {
           <TextBox padding="100px 0 0 24px" fontSize="17px" fontWeight="bold">
             나의 소리는?
           </TextBox>
-          <audio src="오보에.mp3" autoplay controls />
+          <MusicPlay controls>
+            <source src="오보에.mp3" type="audio/mpeg" />
+          </MusicPlay>
 
           <MusicResult1
             musicName="오보에"
